@@ -15,50 +15,51 @@
         
         <div class="container__heading">
         <h1 class="container__h1">Daily Todo List</h1>
-    </div>
+       </div>
 
         <form id="container__bookForm">
 
-          <div>
+          <div class="container__dv">
             <label for="heading">Heading</label>
-            <input type="text" id="container__heading" minlength="05" maxlength="50"  >
+            <input class="container__input" type="text" id="container__heading" minlength="05" maxlength="50" >
           </div>
 
-          <div>
+          <div class="container__dv">
             <label for="description">Description</label>
-            <textarea type="text" name="desc" id="container__desc" rows="4" cols="50" minlength="10" maxlength="300"></textarea>
+            <textarea class="container__input container__desc" type="text" name="desc" id="container__desc" rows="7" cols="50" minlength="10" maxlength="300"></textarea>
           </div>
 
-          <div>
+          <div class="container__dv">
             <label for="day">Date</label>
-            <input type="text" id="container__date" minlength="10" maxlength="30" >
+            <input  class="container__input container__date" type="text" id="container__date" minlength="10" maxlength="30" >
           </div>
 
-          <div>
+          <div class="container__dv">
             <label for="time">Time Range</label>
-            <input  id="container__time" minlength="3" maxlength="12" >
+            <input  class="container__input container__time"  id="container__time" minlength="3" maxlength="12" >
           </div>
 
-          <div>
-            <input type="submit" value="Add Task">
+          <div class="container__sbmtBtn">
+            <input class="container__sbmtInput" type="submit" value="Add Task">
           </div>
         </form>
 
         <div class="container__task">
-            <h3 class="container__taskLeft">Tasks Left</h3>
+            <h1 class="container__taskLeft">Tasks Left</h1>
         </div>
 
         <table >
           <thead>
-            <tr>
-              <th>Heading</th>
-              <th>Desc</th>
-              <th>Date</th>
-              <th>Time</th>
-              <th></th>
+            <tr class="container__tableRows">
+              <th class="container__tableHeading container__headingFirst">Heading</th>
+              <th class="container__tableHeading">Desc</th>
+              <th class="container__tableHeading">Date</th>
+              <th class="container__tableHeading">Time</th>
+              <th class="container__tableHeading"></th>
             </tr>
           </thead>
           <tbody id="container__todoList"></tbody>
+          </table>
        
         </section>
      

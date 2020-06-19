@@ -1,0 +1,106 @@
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-size: 15px;
+    scroll-behavior: smooth;
+  }
+  * {
+    scroll-behavior: smooth;
+    scroll-margin-top: 120px;
+  }
+  
+  *,
+  *:before,
+  *:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+      /* display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center; */
+      margin: 7rem 10rem 7rem 10rem;
+  }
+
+  #container__bookForm {
+
+  }
+
+  .container__dv {
+      display: flex;
+      flex-direction: column;
+  }
+
+  .container__input {
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 1.5rem 5.5rem;
+    font-size: 2rem;
+    font-weight: 900;
+    line-height: 1.5; 
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+  }
+
+  .container__desc {
+    height: calc(6.5em + 0.75rem + 2px);
+    padding: 1.5rem 5.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+
+  .container__date {
+      font-weight: 500;
+  }
+
+  .container__time {
+      
+  }
+
+  .container__sbmtBtn {
+      display: flex;
+      justify-content: center;
+     
+  }
+
+  .container__sbmtInput {
+      flex: 1 1 100%;
+  }
+
+  .container__taskLeft {
+      text-align: center;
+      font-size: 2rem;
+  }
+
+  .container__tableRows {
+      display: flex;
+  }
+
+  /* .container__tableHeading {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+
+    /* padding: 0.75rem; 
+    vertical-align: top;
+    border-top: 1px solid #dee2e6
+
+  } */
+
+  .container__tableHeading + .container__tableHeading {
+    margin-left: 15rem;
+    /* font-size: 1.7rem; */
+  }
+
+  .container__headingFirst {
+      /* font-size: 1.7rem; */
+  }
