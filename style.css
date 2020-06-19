@@ -82,25 +82,31 @@ html {
       font-size: 2rem;
   }
 
-  .container__tableRows {
-      display: flex;
+  .container__table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #222;
+    font-size: 2rem;
+    border-collapse: collapse;
+    border-spacing: 2px;
   }
 
-  /* .container__tableHeading {
+ @media all and (max-width: 1420px) {
+     .container__table {
+         font-size: 1rem;
+     }
+ }
+
+
+  .container__table thead th {
     vertical-align: bottom;
     border-bottom: 2px solid #dee2e6;
-
-    /* padding: 0.75rem; 
+}
+.container__table th, .container__table td {
+    padding: 0.75rem;
     vertical-align: top;
-    border-top: 1px solid #dee2e6
-
-  } */
-
-  .container__tableHeading + .container__tableHeading {
-    margin-left: 15rem;
-    /* font-size: 1.7rem; */
-  }
-
-  .container__headingFirst {
-      /* font-size: 1.7rem; */
-  }
+    border-top: 1px solid #dee2e6;
+}
+th {
+    text-align: center;
+}
