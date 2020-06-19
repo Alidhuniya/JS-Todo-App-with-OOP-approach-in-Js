@@ -19,41 +19,41 @@
         <form id="container__bookForm">
 
           <div>
-            <label for="title">Heading</label>
-            <input type="text" id="container__title" >
+            <label for="heading">Heading</label>
+            <input type="text" id="container__heading" minlength="05" maxlength="50"  >
           </div>
 
           <div>
-            <label for="author">Description</label>
-            <textarea type="text" name="desc" id="container__author" rows="4" cols="50"></textarea>
+            <label for="description">Description</label>
+            <textarea type="text" name="desc" id="container__desc" rows="4" cols="50" minlength="10" maxlength="300"></textarea>
           </div>
 
           <div>
-            <label for="date">Date:</label>
-          
-            <input type="text" id="container__day" >
+            <label for="day">Date</label>
+            <input type="text" id="container__date" minlength="10" maxlength="30" >
           </div>
 
           <div>
-            <label for="time">Timing</label>
-            <input  id="container__time" >
+            <label for="time">Time Range</label>
+            <input  id="container__time" minlength="3" maxlength="12" >
           </div>
-
-          
 
           <div>
             <input type="submit" value="Add Task">
           </div>
-         
         </form>
+
+        <div class="container__task">
+            <h3 class="container__taskLeft">Tasks Left</h3>
+        </div>
 
         <table >
           <thead>
             <tr>
-              <th>Title</th>
-              <th>Author</th>
-              <th>ISBN#</th>
+              <th>Heading</th>
+              <th>Desc</th>
               <th>Date</th>
+              <th>Time</th>
               <th></th>
             </tr>
           </thead>

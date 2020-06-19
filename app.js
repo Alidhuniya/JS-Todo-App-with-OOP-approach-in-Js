@@ -1,10 +1,10 @@
 // Book Class: Represents a Book
 class Book {
-    constructor(title, author, isbn, day) {
-      this.title = title;
-      this.author = author;
-      this.day = day;
-      this.isbn = isbn;
+    constructor(heading, desc, date, time) {
+      this.heading = heading;
+      this.desc = desc;
+      this.date = date;
+      this.time = time;
       
     }
   }
@@ -23,10 +23,10 @@ class Book {
       const row = document.createElement('tr');
   
       row.innerHTML = `
-        <td>${book.title}</td>
-        <td>${book.author}</td>
-        <td>${book.day}</td>
-        <td>${book.isbn}</td>
+        <td>${book.heading}</td>
+        <td>${book.desc}</td>
+        <td>${book.date}</td>
+        <td>${book.time}</td>
        
         <td><a href="#" class="delete">X</a></td>
       `;
@@ -53,9 +53,9 @@ class Book {
     }
   
     static clearFields() {
-      document.querySelector('#container__title').value = '';
-      document.querySelector('#container__author').value = '';
-      document.querySelector('#container__day').value = '';
+      document.querySelector('#container__heading').value = '';
+      document.querySelector('#container__desc').value = '';
+      document.querySelector('#container__date').value = '';
       document.querySelector('#container__time').value = '';
      
     }
@@ -81,11 +81,11 @@ class Book {
       localStorage.setItem('books', JSON.stringify(books));
     }
   
-    static removeBook(isbn) {
+    static removeBook(time) {
       const books = Store.getBooks();
   
       books.forEach((book, index) => {
-        if(book.isbn === isbn) {
+        if(book.time === time) {
           books.splice(index, 1);
         }
       });
@@ -103,19 +103,19 @@ class Book {
     e.preventDefault();
   
     // Get form values
-    const title = document.querySelector('#container__title').value;
-    const author = document.querySelector('#container__author').value;
-    const day = document.querySelector('#container__day').value;
-    const isbn = document.querySelector('#container__time').value;
+    const heading = document.querySelector('#container__heading').value;
+    const desc = document.querySelector('#container__desc').value;
+    const date = document.querySelector('#container__date').value;
+    const time = document.querySelector('#container__time').value;
     
   
   
     // Validaate
-    if(title === '' || author === '' || isbn === '') {
+    if(heading === '' || desc === '' || time === '') {
       UI.showAlert('Please fill in all fields', 'danger');
     } else {
       // Instatiate book
-      const book = new Book(title, author, day, isbn);
+      const book = new Book(heading, desc, date, time);
   
       // Add Book to UI
       UI.addBookToList(book);
