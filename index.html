@@ -10,11 +10,16 @@
     <meta name="author" content="Ali Dhuniya" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Daily Todo List</title>
+    <link rel="icon" href="./images/icons/icon-128x128.png">
+    <link rel="manifest" href="./manifest.json">
+    <meta name="msapplication-TileColor" content="#EAF0F1">
+    <meta name="theme-color" content="#F3B431">
     <link rel="stylesheet" href="style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700;900&display=swap"
       rel="stylesheet"
     />
+    
   </head>
   <body>
     <section class="container">
@@ -45,7 +50,7 @@
             id="container__desc"
             rows="7"
             cols="50"
-            minlength="10"
+            minlength="7"
             maxlength="300"
           ></textarea>
         </div>
@@ -98,6 +103,7 @@
       Made by <span class="container__footerSpan"><a href = "https://github.com/Alidhuniya">Ali Dhuniya </a> </span> &copy;2020
     </footer>
 
+    <script src="sw.js"></script>
     <script src="app.js"></script>
   </body>
 </html>
