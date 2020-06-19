@@ -1,5 +1,5 @@
 // Book Class: Represents a Book
-class Book {
+class Todo {
     constructor(heading, desc, date, time) {
       this.heading = heading;
       this.desc = desc;
@@ -12,26 +12,26 @@ class Book {
   // UI Class: Handle UI Tasks
   class UI {
     static displayBooks() {
-      const books = Store.getBooks();
+      const lists = Store.getBooks();
   
-      books.forEach((book) => UI.addBookToList(book));
+      lists.forEach((list) => UI.addBookToList(list));
     }
   
-    static addBookToList(book) {
-      const list = document.querySelector('#container__todoList');
+    static addBookToList(list) {
+      const listitem = document.querySelector('#container__todoList');
   
       const row = document.createElement('tr');
   
       row.innerHTML = `
-        <td>${book.heading}</td>
-        <td>${book.desc}</td>
-        <td>${book.date}</td>
-        <td>${book.time}</td>
+        <td>${list.heading}</td>
+        <td>${list.desc}</td>
+        <td>${list.date}</td>
+        <td>${list.time}</td>
        
         <td><a href="#" class="delete">X</a></td>
       `;
   
-      list.appendChild(row);
+      listitem.appendChild(row);
     }
   
     static deleteBook(el) {
@@ -65,32 +65,32 @@ class Book {
   // Store Class: Handles Storage
   class Store {
     static getBooks() {
-      let books;
-      if(localStorage.getItem('books') === null) {
-        books = [];
+      let lists;
+      if(localStorage.getItem('lists') === null) {
+        lists = [];
       } else {
-        books = JSON.parse(localStorage.getItem('books'));
+        lists = JSON.parse(localStorage.getItem('lists'));
       }
   
-      return books;
+      return lists;
     }
   
-    static addBook(book) {
-      const books = Store.getBooks();
-      books.push(book);
-      localStorage.setItem('books', JSON.stringify(books));
+    static addBook(list) {
+      const lists = Store.getBooks();
+      lists.push(list);
+      localStorage.setItem('lists', JSON.stringify(lists));
     }
   
     static removeBook(time) {
-      const books = Store.getBooks();
+      const lists = Store.getBooks();
   
-      books.forEach((book, index) => {
-        if(book.time === time) {
-          books.splice(index, 1);
+      lists.forEach((list, index) => {
+        if(list.time === time) {
+          lists.splice(index, 1);
         }
       });
   
-      localStorage.setItem('books', JSON.stringify(books));
+      localStorage.setItem('lists', JSON.stringify(lists));
     }
   }
   
@@ -110,18 +110,18 @@ class Book {
     
   
   
-    // Validaate
-    if(heading === '' || desc === '' || time === '') {
+    // Validate
+    if(heading === '' || desc === '' || date === '' || time === '') {
       UI.showAlert('Please fill in all fields', 'danger');
     } else {
       // Instatiate book
-      const book = new Book(heading, desc, date, time);
+      const list = new Todo(heading, desc, date, time);
   
       // Add Book to UI
-      UI.addBookToList(book);
+      UI.addBookToList(list);
   
       // Add book to store
-      Store.addBook(book);
+      Store.addBook(list);
   
       // Show success message
       UI.showAlert('Book Added', 'success');
