@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookList</title>
+   
+</head>
+<body>
+    <section class="container">
+        <div>
+        <h1 >Daily Todo List</h1>
+    </div>
+
+        <form id="bookForm">
+
+          <div>
+            <label for="title">Heading</label>
+            <input type="text" id="title" >
+          </div>
+
+          <div>
+            <label for="author">Description</label>
+            <textarea type="text" name="desc" id="author" rows="4" cols="50"></textarea>
+          </div>
+
+          <div>
+            <label for="date">Date:</label>
+          
+            <input type="text" id="day" >
+          </div>
+
+          <div>
+            <label for="isbn">Timing</label>
+            <input  id="isbn" >
+          </div>
+
+          
+
+          <div>
+            <input type="submit" value="Add Book">
+          </div>
+         
+        </form>
+
+        <table >
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Author</th>
+              <th>ISBN#</th>
+              <th>Date</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="book-list"></tbody>
+       
+        </section>
+     
+      <script src="app.js"></script>
+</body>
+</html>
