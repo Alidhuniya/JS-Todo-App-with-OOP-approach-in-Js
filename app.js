@@ -18,7 +18,7 @@ class Book {
     }
   
     static addBookToList(book) {
-      const list = document.querySelector('#book-list');
+      const list = document.querySelector('#container__todoList');
   
       const row = document.createElement('tr');
   
@@ -45,7 +45,7 @@ class Book {
       div.className = `alert alert-${className}`;
       div.appendChild(document.createTextNode(message));
       const container = document.querySelector('.container');
-      const form = document.querySelector('#bookForm');
+      const form = document.querySelector('#container__bookForm');
       container.insertBefore(div, form);
   
       // Vanish in 3 seconds
@@ -53,10 +53,10 @@ class Book {
     }
   
     static clearFields() {
-      document.querySelector('#title').value = '';
-      document.querySelector('#author').value = '';
-      document.querySelector('#day').value = '';
-      document.querySelector('#isbn').value = '';
+      document.querySelector('#container__title').value = '';
+      document.querySelector('#container__author').value = '';
+      document.querySelector('#container__day').value = '';
+      document.querySelector('#container__time').value = '';
      
     }
     }
@@ -98,19 +98,19 @@ class Book {
   document.addEventListener('DOMContentLoaded', UI.displayBooks);
   
   // Event: Add a Book
-  document.querySelector('#bookForm').addEventListener('submit', (e) => {
+  document.querySelector('#container__bookForm').addEventListener('submit', (e) => {
     // Prevent actual submit
     e.preventDefault();
   
     // Get form values
-    const title = document.querySelector('#title').value;
-    const author = document.querySelector('#author').value;
-    const day = document.querySelector('#day').value;
-    const isbn = document.querySelector('#isbn').value;
+    const title = document.querySelector('#container__title').value;
+    const author = document.querySelector('#container__author').value;
+    const day = document.querySelector('#container__day').value;
+    const isbn = document.querySelector('#container__time').value;
     
   
   
-    // Validay
+    // Validaate
     if(title === '' || author === '' || isbn === '') {
       UI.showAlert('Please fill in all fields', 'danger');
     } else {
@@ -132,7 +132,7 @@ class Book {
   });
   
   // Event: Remove a Book
-  document.querySelector('#book-list').addEventListener('click', (e) => {
+  document.querySelector('#container__todoList').addEventListener('click', (e) => {
     // Remove book from UI
     UI.deleteBook(e.target);
   
