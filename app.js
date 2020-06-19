@@ -139,5 +139,5 @@ document
     Store.removeTodo(e.target.parentElement.previousElementSibling.textContent);
 
     // Show success message
-    UI.showAlert("Book Removed", "success");
+    UI.showAlert("Book Removed", "remove");
   });

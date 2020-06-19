@@ -1,68 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Todo Web App with JavaScript Object Oriented approach - VanillaJS.">
-    <meta name="keywords" content="HTML, CSS, JavaScript, DOM-Manipulation">
-    <meta name="author" content="Ali Dhuniya">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Todo Web App with JavaScript Object Oriented approach - VanillaJS."
+    />
+    <meta name="keywords" content="HTML, CSS, JavaScript, DOM-Manipulation" />
+    <meta name="author" content="Ali Dhuniya" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Daily Todo List</title>
-    <link rel="stylesheet" href="style.css">
-   
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <section class="container">
-        
-        <div class="container__heading">
+      <div class="container__heading">
         <h1 class="container__h1">Daily Todo List</h1>
-       </div>
+      </div>
 
-        <form id="container__bookForm">
-
-          <div class="container__dv">
-            <label for="heading">Heading</label>
-            <input class="container__input" type="text" id="container__heading" minlength="05" maxlength="50" >
-          </div>
-
-          <div class="container__dv">
-            <label for="description">Description</label>
-            <textarea class="container__input container__desc" type="text" name="desc" id="container__desc" rows="7" cols="50" minlength="10" maxlength="300"></textarea>
-          </div>
-
-          <div class="container__dv">
-            <label for="day">Date</label>
-            <input  class="container__input container__date" type="text" id="container__date" minlength="10" maxlength="30" >
-          </div>
-
-          <div class="container__dv">
-            <label for="time">Time Range</label>
-            <input  class="container__input container__time"  id="container__time" minlength="3" maxlength="12" >
-          </div>
-
-          <div class="container__sbmtBtn">
-            <input class="container__sbmtInput" type="submit" value="Add Task">
-          </div>
-        </form>
-
-        <div class="container__task">
-            <h1 class="container__taskLeft">Tasks Left</h1>
+      <form id="container__bookForm">
+        <div class="container__dv">
+          <label class="container__formHeading" for="heading">Heading</label>
+          <input
+            class="container__input"
+            type="text"
+            id="container__heading"
+            minlength="05"
+            maxlength="50"
+          />
         </div>
 
-        <table class="container__table" >
-          <thead>
-            <tr class="container__tableRows">
-              <th class="container__tableHeading">Heading</th>
-              <th class="container__tableHeading">Desc</th>
-              <th class="container__tableHeading">Date</th>
-              <th class="container__tableHeading">Time</th>
-              <th class="container__tableHeading"></th>
-            </tr>
-          </thead>
-          <tbody id="container__todoList"></tbody>
-          </table>
-       
-        </section>
-     
-      <script src="app.js"></script>
-</body>
+        <div class="container__dv">
+          <label class="container__formHeading" for="description"
+            >Description</label
+          >
+          <textarea
+            class="container__input container__desc"
+            type="text"
+            name="desc"
+            id="container__desc"
+            rows="7"
+            cols="50"
+            minlength="10"
+            maxlength="300"
+          ></textarea>
+        </div>
+
+        <div class="container__dv">
+          <label class="container__formHeading" for="day">Date</label>
+          <input
+            class="container__input container__date"
+            type="text"
+            id="container__date"
+            minlength="10"
+            maxlength="30"
+          />
+        </div>
+
+        <div class="container__dv">
+          <label class="container__formHeading" for="time">Time Range</label>
+          <input
+            class="container__input container__time"
+            id="container__time"
+            minlength="3"
+            maxlength="12"
+          />
+        </div>
+
+        <div class="container__sbmtBtn">
+          <input class="container__sbmtInput" type="submit" value="Add Task" />
+        </div>
+      </form>
+
+      <div class="container__task">
+        <h1 class="container__taskLeft">Tasks Left</h1>
+      </div>
+
+      <table class="container__table">
+        <thead>
+          <tr class="container__tableRows">
+            <th class="container__tableHeading">Heading</th>
+            <th class="container__tableHeading">Desc</th>
+            <th class="container__tableHeading">Date</th>
+            <th class="container__tableHeading">Time</th>
+            <th class="container__tableHeading">Delete</th>
+          </tr>
+        </thead>
+        <tbody id="container__todoList"></tbody>
+      </table>
+    </section>
+
+    <footer class="container__footer">
+      Made by <span class="container__footerSpan"><a href = "https://github.com/Alidhuniya">Ali Dhuniya </a> </span> &copy;2020
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
 </html>
